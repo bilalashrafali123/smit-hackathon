@@ -8,6 +8,7 @@ import Register from './Pages/Register.jsx'
 import Login from './Pages/Login.jsx'
 import Logout from './Pages/Logout.jsx'
 import Layout from './Layout.jsx'
+import CalculatorPage from './Pages/CalculatorPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
               path: "logout",
               element: <Logout/>
           },
+          {
+            path: "CalculatorPage",
+            element: <CalculatorPage/>
+        },
           
       ]
   }

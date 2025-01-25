@@ -2,14 +2,22 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const todoSchema = new Schema(
+const financeSchema = new Schema(
   {
-    title: {
+    catogery: {
       type: String,
       required: true,
     },
-    description: {
+    subcategory: {
       type: String,
+      required: true,
+    },
+    deposit: {
+      type: Number,
+      required: true,
+    },
+    loanPeriod: {
+      type: Number,
       required: true,
     },
   },
@@ -18,4 +26,4 @@ const todoSchema = new Schema(
   }
 );
 
-export default mongoose.model("Datas", todoSchema);
+export default mongoose.model("Finances", financeSchema);

@@ -1,36 +1,34 @@
 import mongoose from "mongoose";
-import Datas from "../models/todos.models.js";
+import Finances from "../models/data.models.js"
 
 
-  const addData = (req, res) => {
-   const { title, description } = req.body;
+const addData = (req, res) => {
+  const { catogery, subcategory , deposit , loanPeriod } = req.body;
 
-   if (!title || !description) {
+  if (!catogery) return res.status(400).json({ message: "catogery required" });
+  if (!subcategory) return res.status(400).json({ message: "subcategory required" });
+  if (!deposit) return res.status(400).json({ message: "deposit required" });
+  if (!loanPeriod) return res.status(400).json({ message: "loanPeriod required" });
 
-    res.status(400).json({
-      message: "title or description required",
-    });
-    return;
-  }
-   
-   const data = Datas.create({
-    title,
-    description,
+  const finance = Finances.create({
+    catogery,
+    subcategory,
+    deposit,
+    loanPeriod,
   });
   res.status(201).json({
     message: "data added to database successfully",
-  });
-
-   };
-
-
-
- const getAllDatas = async (req, res) => {
-  const datas = await Datas.find({});
-  res.status(200).json({
-     datas: datas,
-  });
+  });
 };
+
+
+
+//  const getAllDatas = async (req, res) => {
+//   const datas = await Datas.find({});
+//   res.status(200).json({
+//      datas: datas,
+//   });
+// };
 
 const getDataWithId = async (req, res) => {
   const { id } = req.params;

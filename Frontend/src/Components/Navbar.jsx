@@ -41,14 +41,13 @@ const Navbar = () => {
     <nav className="border-gray-200 bg-[#00b5fd]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-        {/* Logo */}
         <Link to="/">
           <span className="self-center text-2xl hover:text-white font-semibold whitespace-nowrap text-black">
-            Personal Blogging App
+   Saylani Microfinance App
           </span>
         </Link>
 
-        {/* Hamburger Menu */}
+   
         <label className="btn-circle bg-[#00b5fd] swap swap-rotate md:hidden">
           <input 
             type="checkbox" 
@@ -84,7 +83,7 @@ const Navbar = () => {
           id="navbar-default"
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-            {["/" , "/register", "/login", "/logout"].map((path, index) => (
+            {["/" , "/register", "/login", "/logout" ,"/CalculatorPage"].map((path, index) => (
               <li key={index}>
                 <Link
                   to={path}
