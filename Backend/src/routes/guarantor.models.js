@@ -4,7 +4,7 @@ import { addData } from "../controllers/data.controllers.js";
 const router = express.Router();
 
 
-router.post("/guarantordata", addData);
+router.post("/guarantorRoutes", addData);
 
 
-export default router;
+export default router

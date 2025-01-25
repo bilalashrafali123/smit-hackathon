@@ -1,21 +1,38 @@
 import mongoose from "mongoose";
 
+const Schema = mongoose.Schema;
 
-const GuarantorSchema = new mongoose.Schema(
+const guarantorSchema = new Schema(
   {
-    catogery: {
+    name1: {
       type: String,
       required: true,
     },
-    subcategory: {
+    email1: {
       type: String,
       required: true,
     },
-    deposit: {
+    location1: {
       type: Number,
       required: true,
     },
-    loanPeriod: {
+    cnic1: {
+      type: Number,
+      required: true,
+    },
+    name2: {
+      type: String,
+      required: true,
+    },
+    email2: {
+      type: String,
+      required: true,
+    },
+    location2: {
+      type: Number,
+      required: true,
+    },
+    cnic2: {
       type: Number,
       required: true,
     },
@@ -25,4 +42,4 @@ const GuarantorSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Guarantor", GuarantorSchema);
+export default mongoose.model("Guarantors", guarantorSchema);
