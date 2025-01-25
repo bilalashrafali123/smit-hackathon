@@ -2,31 +2,33 @@ import mongoose from "mongoose";
 import Datas from "../models/todos.models.js";
 
 
-const addData = (req, res) => {
-  const { title, description } = req.body;
+  const addData = (req, res) => {
+   const { title, description } = req.body;
 
-  if (!title || !description) {
+   if (!title || !description) {
+
     res.status(400).json({
       message: "title or description required",
     });
     return;
   }
-
-  const data = Datas.create({
+   
+   const data = Datas.create({
     title,
     description,
   });
   res.status(201).json({
     message: "data added to database successfully",
   });
-};
+
+   };
 
 
 
-const getAllDatas = async (req, res) => {
+ const getAllDatas = async (req, res) => {
   const datas = await Datas.find({});
   res.status(200).json({
-    datas: datas,
+     datas: datas,
   });
 };
 
@@ -46,11 +48,11 @@ const getDataWithId = async (req, res) => {
   }
 
   res.status(200).json(todo);
-};
+ };
 
 
 
-const deleteData = async (req, res) => {
+  const deleteData = async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -66,12 +68,10 @@ const deleteData = async (req, res) => {
     message: "data deleted successfully",
     data,
   });
-};
+ };
 
 
-
-
-const editData = async (req, res) => {
+  const editData = async (req, res) => {
   const { id } = req.params;
   const { title, description, completed } = req.body;
 
@@ -96,6 +96,6 @@ const editData = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Something went wrong", details: error.message });
   }
-};
+ };
 
-export { addData , getAllDatas , getDataWithId , deleteData , editData };
+ export { addData , getAllDatas , getDataWithId , deleteData , editData };
