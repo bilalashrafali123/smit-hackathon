@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema;
 
-const financeSchema = new Schema(
+const financeSchema = new mongoose.Schema(
   {
     catogery: {
       type: String,
@@ -19,6 +18,14 @@ const financeSchema = new Schema(
     loanPeriod: {
       type: Number,
       required: true,
+    },
+    cnic : {
+      type:Number,
+      required:true
+    },
+    reasonforloan : {
+      type:String,
+      required:true
     },
   },
   {
