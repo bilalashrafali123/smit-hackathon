@@ -13,7 +13,7 @@ const guarantorSchema = new Schema(
       required: true,
     },
     location1: {
-      type: Number,
+      type: String,
       required: true,
     },
     cnic1: {
@@ -29,7 +29,7 @@ const guarantorSchema = new Schema(
       required: true,
     },
     location2: {
-      type: Number,
+      type: String,
       required: true,
     },
     cnic2: {

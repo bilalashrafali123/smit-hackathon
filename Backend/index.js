@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 import userRoutes from "./src/routes/user.routes.js";
 import connectDB from "./src/db/index.js";
 import dataRoutes from "./src/models/data.models.js";
-
+import GuarantorRoutes from "./src/models/Guarantor.models.js"
 const app = express();
 
 const PORT = process.env.PORT || 4000;
@@ -19,7 +19,8 @@ app.use(cookieParser());
 
 
 app.use("/api/v1", userRoutes);
-app.use("/api/v1" , dataRoutes)
+app.use("/api/v1" , dataRoutes);
+app.use("/api/v1" , GuarantorRoutes)
 
 
 

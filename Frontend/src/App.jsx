@@ -194,7 +194,7 @@ const LandingPage = () => {
             </button>
           </div>
 
-          {/* Loan Breakdown Display */}
+         
           {breakdown && (
             <div className="mt-10 bg-white p-6 shadow-lg rounded max-w-lg mx-auto">
               <h4 className="text-2xl font-bold text-gray-800">Loan Breakdown</h4>
