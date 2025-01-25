@@ -2,10 +2,9 @@ import User from "../models/user.models.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-
 const generateAccessToken = (user) => {
   return jwt.sign({ email: user.email }, process.env.ACCESS_JWT_SECRET, {
-    expiresIn: "6h",
+    expiresIn: "10h",
   });
 };
 const generateRefreshToken = (user) => {
