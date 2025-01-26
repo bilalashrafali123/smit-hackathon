@@ -1,22 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }, 
-      {
-        "src":"/confirmation-page.html",
-        "dest":"/public/confirmation-page.html"
-      },
-      {
-        "src":"/(.*)",
-        "dest":"index.js"
-
-      
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/confirmation-page.html",
+      "dest": "/public/confirmation-page.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
