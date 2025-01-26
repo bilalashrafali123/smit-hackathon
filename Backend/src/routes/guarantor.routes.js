@@ -1,10 +1,11 @@
 import express from "express";
-import { addData } from "../controllers/data.controllers.js";
+import { addData } from "../controllers/guarantor.controllers.js";
 
 const router = express.Router();
 
 
-router.post("/guarantorRoutes", addData);
+router.post("/guarantorData", addData);
 
 
-export default router
+
+export default router;

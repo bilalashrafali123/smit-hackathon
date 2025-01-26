@@ -1,10 +1,11 @@
 import express from "express";
-import { addData } from "../controllers/data.controllers.js";
+
+import { addData,  } from "../controllers/data.controllers.js";
 
 const router = express.Router();
 
 
-router.post("/data", addData);
+router.post("/financeData", addData);
 
 
-export default router;
+export default router;

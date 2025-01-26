@@ -1,13 +1,22 @@
 import mongoose from "mongoose";
 
+const Schema = mongoose.Schema;
 
-const financeSchema = new mongoose.Schema(
+const financeSchema = new Schema(
   {
-    catogery: {
+    cnic: {
+      type: Number,
+      required: true,
+    },
+    reasonForLoan: {
       type: String,
       required: true,
     },
-    subcategory: {
+    category: {
+      type: String,
+      required: true,
+    },
+    subCatogary: {
       type: String,
       required: true,
     },
@@ -19,18 +28,10 @@ const financeSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    cnic : {
-      type:Number,
-      required:true
-    },
-    reasonforloan : {
-      type:String,
-      required:true
-    },
   },
   {
     timestamps: true,
   }
 );
 
-export default mongoose.model("Finances", financeSchema);
+export default mongoose.model("Finances", financeSchema);

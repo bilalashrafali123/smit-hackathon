@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Guarantors from "../models/Guarantor.models.js";
+import Guarantors from "./models/guarantor.models.js";
 
 
 
@@ -32,4 +32,4 @@ const addData = (req, res) => {
 };
 
 
-export default addData
+export {addData}
